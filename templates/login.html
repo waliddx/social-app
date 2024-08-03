@@ -1,0 +1,22 @@
+{% extends 'jinja/login_base.html' %}
+{% block content %}
+<div class="login_form">
+    <form method="post">
+        <input type="email" name="Email" placeholder="Email address">
+        <input type="password" name="Password" placeholder="pasword">
+        <input type="submit" value="Log in">
+    </form>
+    <a href="#">forgot password?</a>
+    {% if msg %}
+    <p class="error">
+        {{ msg }}
+    </p>
+    {% endif %}
+    <hr>
+    <div class="create">
+        <a href="{{ url_for('signup') }}">
+            <button>Create new account</button>
+        </a>
+    </div>
+</div>
+{% endblock %}

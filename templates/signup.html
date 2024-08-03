@@ -1,0 +1,31 @@
+{% extends 'jinja/login_base.html' %}
+{% block content %}
+<div class="signup_form">
+    <form method="post">
+        <input type="text" name="firstName" placeholder="First name">
+        <input type="text" name="lastName" placeholder="Last name">
+        <input type="email" name="Email" placeholder="Email address">
+        <input type="password" name="Password" placeholder="Pasword">
+        <input type="password" name="cPassword" placeholder="Confirm password">
+        <input type="submit"  value="Sign up">
+    </form>
+    <div class="create">
+        {% if error %}
+            <p class="error">
+                {{ error }}
+            </p>
+        {% elif passed %}
+            <p class="passed">
+                {{ passed }}
+            </p>
+        {% endif %}
+        <hr>
+        <p class="signup">
+            Already got an account,
+            <a href="{{ url_for('login') }}">
+                Log in?
+            </a>
+        </p>
+    </div>
+</div>
+{% endblock %}
