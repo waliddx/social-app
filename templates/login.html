@@ -1,9 +1,9 @@
-{% extends 'jinja/login_base.html' %}
+{% extends 'base/login_base.html' %}
 {% block content %}
 <div class="login_form">
     <form method="post">
-        <input type="email" name="Email" placeholder="Email address">
-        <input type="password" name="Password" placeholder="pasword">
+        <input type="email" name="Email" required placeholder="Email address">
+        <input type="password" name="Password" required placeholder="pasword">
         <input type="submit" value="Log in">
     </form>
     <a href="#">forgot password?</a>

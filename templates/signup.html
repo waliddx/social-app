@@ -1,12 +1,12 @@
-{% extends 'jinja/login_base.html' %}
+{% extends 'base/login_base.html' %}
 {% block content %}
 <div class="signup_form">
     <form method="post">
-        <input type="text" name="firstName" placeholder="First name">
-        <input type="text" name="lastName" placeholder="Last name">
-        <input type="email" name="Email" placeholder="Email address">
-        <input type="password" name="Password" placeholder="Pasword">
-        <input type="password" name="cPassword" placeholder="Confirm password">
+        <input type="text" name="firstName" required placeholder="First name">
+        <input type="text" name="lastName" required placeholder="Last name">
+        <input type="email" name="Email" required placeholder="Email address">
+        <input type="password" name="Password" required placeholder="Pasword">
+        <input type="password" name="cPassword" required placeholder="Confirm password">
         <input type="submit"  value="Sign up">
     </form>
     <div class="create">
