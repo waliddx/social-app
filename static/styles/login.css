@@ -1,0 +1,87 @@
+.login_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    width: 300px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.login_form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+}
+
+.login_form form input[type="email"], 
+    .login_form form input[type="password"]{
+    border-radius: 10px;
+    padding: 10px;
+    outline: none;
+    border: none;
+}
+
+.login_form form input[type="submit"]{
+    padding: 10px;
+    width: 100px;
+    border: none;
+    outline: none;
+    background-color: #52BAB2;
+    color: white;
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.login_form form input[type="submit"]:hover{
+    background-color: #39948D;
+}
+
+.login_form a{
+    padding-top: 10px;
+    text-decoration: none;
+    color: #2b41c2;
+}
+
+.login_form a:visited {
+    color: #2b41c2;
+}
+
+.login_form .error{
+    color: #db2727;
+    font-size: 14px;
+}
+
+.login_form hr{
+    margin-top: 20px;
+    width: 250px;
+}
+
+.login_form .create{
+    padding-top: 30px;
+}
+
+.login_form button{
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: #7B899A;
+    color: white;
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.login_form button:hover{
+    background-color: #a7b4c4;
+}
+
+.login_form button:active{
+    background-color: #7B899A;
+}

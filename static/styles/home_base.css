@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+**************************
+    Navbar => General
+**************************
+*/
+.base-navbar{
+    height: 50px;
+    background-color: rgb(22, 14, 14);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*
+    Navbar => Left side
+*/
+.base-navbar .left{
+    padding-left: 20px;
+}
+
+.base-navbar .left  img{
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+/* 
+    Navbar => Right side
+*/
+.base-navbar .right{
+    padding-right: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.base-navbar .right .base-msg-link{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.base-navbar .right .base-msg-link img{
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.base-navbar .right .base-msg-link img:hover{
+    transform: scale(1.1);
+}
+
+.base-navbar .right .base-signin-link span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    padding-top: 3px;
+}
+
+.base-navbar .right .base-signin-link img {
+    color: white;
+    height: 25px;
+    width: 25px;
+}
+
+.base-navbar .right .base-signin-link a{
+    color: white;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+
+.base-navbar .right .base-signin-link a:visited{
+    color: white;
+    text-decoration: none;
+}
+
+.base-navbar .right .base-signin-link a:hover{
+    transform: scale(1.1);
+    color: #62AAFB;
+    
+}
+
+

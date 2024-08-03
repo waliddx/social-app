@@ -1,0 +1,77 @@
+.signup_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 430px;
+    width: 300px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.signup_form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+}
+
+.signup_form form input[type="email"],
+    .signup_form form input[type="text"],
+        .signup_form form input[type="password"]{
+    border-radius: 10px;
+    padding: 10px;
+    outline: none;
+    border: none;
+}
+
+.signup_form form input[type="submit"]{
+    padding: 10px;
+    width: 100px;
+    border: none;
+    outline: none;
+    background-color: #52BAB2;
+    color: white;
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.signup_form form input[type="submit"]:hover{
+    background-color: #39948D;
+}
+
+.signup_form .create{
+    padding-top: 20px;
+}
+
+.signup_form .create hr{
+    width: 240px;
+}
+
+.signup_form .create .signup{
+    padding-top: 20px;
+}
+
+.signup_form .create .error{
+    color: #db2727;
+    font-size: 14px;
+}
+
+.signup_form .create .passed{
+    color: #23b846;
+    font-size: 14px;
+}
+
+.signup_form a{
+    padding-top: 10px;
+    text-decoration: none;
+    color: #2b41c2;
+}
+
+.signup_form a:visited {
+    color: #2b41c2;
+}
+
