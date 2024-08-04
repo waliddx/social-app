@@ -1,15 +1,21 @@
+import os
+import sqlite3
 from flask import Flask, render_template, request, redirect, url_for, session
 from flask_bcrypt import Bcrypt
-import sqlite3
 from settings.uploads import UPLOAD_FOLDER, ALLOWED_EXTENSIONS
-from time import sleep
+from dotenv import load_dotenv
+
 
 def create_app():
     app = Flask(__name__)
-    app.secret_key= "weChatkey"
+    app.secret_key= os.getenv('SECRET_KEY')
     app.config['UPLOAD_FOLDER']= UPLOAD_FOLDER
 
     bcrypt = Bcrypt(app)
+
+    @app.route('/')
+    def redirected():
+        return redirect(url_for('home'))
 
     @app.route('/home')
     def home():
@@ -61,7 +67,7 @@ def create_app():
         passed = ""
         if request.method == 'POST':
 
-            firsname = request.form['firstName']
+            firstname = request.form['firstName']
             lastname = request.form['lastName']
             email = request.form['Email']
             password = request.form['Password']
@@ -73,11 +79,10 @@ def create_app():
                     with sqlite3.connect('data.db') as db:
                         cr = db.cursor()
                         try:
-                            cr.execute("INSERT INTO users (firstName, lastName, email, password) VALUES (?, ?, ?, ?)", (firsname, lastname, email, hashed_password,))
+                            cr.execute("INSERT INTO users (firstName, lastName, email, password) VALUES (?, ?, ?, ?)", (firstname, lastname, email, hashed_password,))
                             db.commit()
                             passed = "User registred successfully!"
-                            sleep(1)
-                            redirect(url_for('login'))
+                            return redirect(url_for('login', ))
                         except db.IntegrityError:
                             db.rollback()
                             passed= "Email already exists, try to login!"
@@ -103,11 +108,6 @@ def create_app():
     return app
 
 
-
-app= create_app()
-
 if __name__ == "__main__":
+    app= create_app()
     app.run(debug=True, host="0.0.0.0", port=5000)
-
-
-
