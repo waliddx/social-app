@@ -5,8 +5,8 @@
 }
 
 body{
+    position: relative;
     height: 100vh;
-    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -17,7 +17,7 @@ body{
 **************************
 */
 .base-navbar{
-    height: 50px;
+    flex: 0.03;
     background-color: rgb(22, 14, 14);
     display: flex;
     align-items: center;
@@ -64,13 +64,63 @@ body{
     transform: scale(1.1);
 }
 
-.base-navbar .right .base-signin-link span{
+.base-navbar .right .base-signin-link .profile-link{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.base-navbar .right .base-signin-link .profile-link .profile{
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 5px;
-    cursor: pointer;
-    padding-top: 3px;
+    padding-top: 2px;
+}
+
+.base-navbar .right .base-signin-link .profile-link .profile-drop{
+    display: none;
+    margin-left: -118px;
+    position: absolute;
+    background-color: #E9EFE7;
+    border-radius: 20px;
+    margin-top: 50px;
+    height: 118px;
+    width: 200px;
+}
+
+.base-navbar .right .base-signin-link .profile-link .profile-drop ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: inherit;
+    width: inherit;
+    list-style: none;
+    padding: 5px 0 5px 0;
+}
+
+.base-navbar .right .base-signin-link .profile-link .profile-drop ul hr{
+    width: 90%;
+}
+
+.base-navbar .right .base-signin-link .profile-link .profile-drop ul li{
+    padding: 5px 0 5px 8px;
+    transition: 0.2s ease-in-out;
+    align-self: flex-start;
+    width: 90%;
+}
+
+.base-navbar .right .base-signin-link .profile-link .profile-drop ul li:hover{
+    margin-left: 30px;
+    width: 80%;
+}
+
+.base-navbar .right .base-signin-link .profile-link .profile-drop ul li a{
+    color: black;
+}
+
+.base-navbar .right .base-signin-link .profile-link .profile-drop ul li a:visited{
+    color: black;
 }
 
 .base-navbar .right .base-signin-link img {
@@ -91,9 +141,7 @@ body{
 }
 
 .base-navbar .right .base-signin-link a:hover{
-    transform: scale(1.1);
-    color: #62AAFB;
-    
+    color: #62AAFB;   
 }
 
 
