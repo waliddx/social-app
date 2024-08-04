@@ -34,13 +34,25 @@
                 </span>
             </div>
 
-            <div class="base-signin-link">
+            <div class="base-signin-link" id="base">
                 {% if fname %}
-                <span>
-                    <img src="{{ url_for('static', filename= 'images/user.png')}}" alt="User">
-                    <a href="{{ url_for('logout') }}" class="signin-link"> {{ fname }} </a>
-                </span>
+                <div class="profile-link">
+                    <div class="profile">
+                        <img src="{{ url_for('static', filename= 'images/user.png')}}" alt="User">
+                        <a class="signin-link"> {{ fname }} </a>
+                    </div>
                 {% endif %}
+                    <div class="profile-drop" id="drop">
+                        <ul>
+                            <li><a href="{{ url_for('logout') }}"><span></span> Profile</a></li>
+                            <hr>
+                            <li><a href="{{ url_for('logout') }}"><span></span> Settings</a></li>
+                            <hr>
+                            <li><a href="{{ url_for('logout') }}"><span></span> Log out</a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
             </div>
 
         </div>
@@ -48,5 +60,6 @@
     </div>
     {% block content %}
     {% endblock %}
+    <script src="{{ url_for('static', filename= 'scripts/home_script.js') }}"></script>
 </body>
 </html>
